@@ -1,22 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hello World</title>
   <style>
-    html, body { height: 100%; margin: 0; }
-    body {
-      display: grid;
-      place-items: center;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
+    :root {
+      --text-blue: #1e3a8a;
     }
-    h1 { margin: 0; font-size: clamp(2rem, 6vw, 4rem); }
+
+    /* Layout preserved: centered content on a neutral background */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f7fafc;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+    }
+
+    /* Updated styling: larger, bold, blue text */
+    .message {
+      color: var(--text-blue);
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 800;
+      margin: 0.5rem 0;
+    }
+
+    .subtext {
+      color: #4a5568;
+      font-size: 0.95rem;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
-  <h1>Hello World</h1>
+  <main class="container" role="main" aria-label="Hello world example">
+    <h1 class="message">Hello, World!</h1>
+    <p class="subtext">Now bigger, bold, and blue.</p>
+  </main>
 </body>
 </html>
